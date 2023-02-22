@@ -191,68 +191,68 @@ def UpdateData() :
                     print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
                     print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
     
-                    while True:
-                        lanjut = input(f'Apakah anda ingin mengupdate data ini? {Input_ID}?(YA/TIDAK):')
-                        lanjut = lanjut.upper()
-                        if lanjut == 'YA':
-                             while True:
-                                PilihanKolom = input('''
-                                Daftar Kolom : \n
+              
+                    lanjut = input(f'Apakah anda ingin mengupdate data ini? {Input_ID}?(YA/TIDAK):')
+                    lanjut = lanjut.upper()
+                    if lanjut == 'YA':
+                         while True:
+                            PilihanKolom = input('''
+                            Daftar Kolom : \n
 
-                                1. Nama Karyawan
-                                2. Umur
-                                3. Pendidikan
-                                4. Posisi 
-                                5. Keluar 
-                                \nMasukkan nomor sesuai dengan kolom yang ingin diupdate:''')
-                    
+                            1. Nama Karyawan
+                            2. Umur
+                            3. Pendidikan
+                            4. Posisi 
+                            5. Keluar 
+                            \nMasukkan nomor sesuai dengan kolom yang ingin diupdate:''')
 
-                                if PilihanKolom == '1' :
-                                        Nama_Update = (input('Masukan Nama Baru:')) 
-                                        SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
-                                        if SaveUpdate == 'YA':
-                                            DataKaryawanPerusahaan[Search_ID]['Nama'] = Nama_Update
-                                            print('Data Terupdate'.upper())
-                                            print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
-                                            print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
-                            
 
-                                if PilihanKolom == '2' :
-                                        Umur_Update = (input('Masukan Umur Baru:')) 
-                                        SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
-                                        if SaveUpdate == 'YA':
-                                            DataKaryawanPerusahaan[Search_ID]['Umur'] = Umur_Update
-                                            print('Data Terupdate'.upper())
-                                            print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
-                                            print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
-                               
-                                elif PilihanKolom == '3' :
-                                        Pendidikan_Update = (input('Masukan Pendidikan terupdate:')) 
-                                        SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
-                                        if SaveUpdate == 'YA':
-                                            DataKaryawanPerusahaan[Search_ID]['Pendidikan'] = Pendidikan_Update
-                                            print('Data Terupdate'.upper())
-                                            print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
-                                            print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
-                               
-                                elif PilihanKolom == '4' :
-                                        Posisi_Update = (input('Masukan Posisi terupdate:')) 
-                                        SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
-                                        if SaveUpdate == 'YA':
-                                            DataKaryawanPerusahaan[Search_ID]['Posisi'] = Posisi_Update
-                                            print('Data Terupdate'.upper())
-                                            print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
-                                            print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
-                                
-                                elif PilihanKolom == '5' :
-                                       UpdateData()
-                                       break
+                            if PilihanKolom == '1' :
+                                    Nama_Update = (input('Masukan Nama Baru:')) 
+                                    SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
+                                    if SaveUpdate == 'YA':
+                                        DataKaryawanPerusahaan[Search_ID]['Nama'] = Nama_Update
+                                        print('Data Terupdate'.upper())
+                                        print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
+                                        print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
 
-                                else :
-                                    print('Pilihan tidak tersedia silahkan pilih lagi')   
-                        else :
-                            UpdateData()
-                            break
+
+                            if PilihanKolom == '2' :
+                                    Umur_Update = (input('Masukan Umur Baru:')) 
+                                    SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
+                                    if SaveUpdate == 'YA':
+                                        DataKaryawanPerusahaan[Search_ID]['Umur'] = Umur_Update
+                                        print('Data Terupdate'.upper())
+                                        print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
+                                        print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
+
+                            elif PilihanKolom == '3' :
+                                    Pendidikan_Update = (input('Masukan Pendidikan terupdate:')) 
+                                    SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
+                                    if SaveUpdate == 'YA':
+                                        DataKaryawanPerusahaan[Search_ID]['Pendidikan'] = Pendidikan_Update
+                                        print('Data Terupdate'.upper())
+                                        print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
+                                        print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
+
+                            elif PilihanKolom == '4' :
+                                    Posisi_Update = (input('Masukan Posisi terupdate:')) 
+                                    SaveUpdate = input('Simpan  Data Terupdate?(YA/TIDAK):').upper()
+                                    if SaveUpdate == 'YA':
+                                        DataKaryawanPerusahaan[Search_ID]['Posisi'] = Posisi_Update
+                                        print('Data Terupdate'.upper())
+                                        print('ID\t|Nama Karyawan\t\t|Umur\t|Pendidikan\t|Posisi')
+                                        print (f'{DataKaryawanPerusahaan[Search_ID]["ID"]}\t|{DataKaryawanPerusahaan[Search_ID]["Nama"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Umur"]}\t|{DataKaryawanPerusahaan[Search_ID]["Pendidikan"]}\t\t|{DataKaryawanPerusahaan[Search_ID]["Posisi"]}')
+
+                            elif PilihanKolom == '5' :
+                                   UpdateData()
+                                   break
+
+                            else :
+                                print('Pilihan tidak tersedia silahkan pilih lagi')   
+                    else :
+                        UpdateData()
+                        
 
                 else :
                     print('DATA TIDAK ADA')
