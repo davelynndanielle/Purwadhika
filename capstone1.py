@@ -251,7 +251,8 @@ def UpdateData() :
                                 else :
                                     print('Pilihan tidak tersedia silahkan pilih lagi')   
                         else :
-                            UpdateData()      
+                            UpdateData()
+                            break
 
                 else :
                     print('DATA TIDAK ADA')
